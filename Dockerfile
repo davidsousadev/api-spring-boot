@@ -14,7 +14,7 @@
 
 # ENTRYPOINT [ "java", "-jar", "app.jar" ]
 
-FROM maven:3.8.6 AS build
+FROM maven:3.9.0-openjdk-17 AS build
 WORKDIR /app
 COPY . .
 RUN mvn clean install
