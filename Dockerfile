@@ -3,7 +3,7 @@ RUN apt-get update && \
     apt-get install openjdk-17-jdk -y && \
     apt-get install maven -y
 COPY . .
-RUN mvn clean install -X
+# RUN mvn clean install -X
 FROM  openjdk:17-jdk-slim
 EXPOSE 8080
 WORKDIR /app
